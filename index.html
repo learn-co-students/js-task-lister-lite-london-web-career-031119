@@ -4,6 +4,18 @@
   <meta charset="UTF-8">
   <title>Flatiron Task Lister</title>
   <link rel="stylesheet" href="./style.css">
+  <style>
+  .top-priority{
+    color:red;
+  }
+  .medium-priority{
+    color:blue;
+  }
+  .low-priority{
+    color:green
+  }
+
+  </style>
 </head>
 <body>
   <div id="main-content">
@@ -11,7 +23,12 @@
 
     <form id="create-task-form" action="#" method="post">
       <label for="new-task-description">Task description:</label>
-      <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+      <input type="text" required id="new-task-description" name="new-task-description" placeholder="description">
+      <select name="priorities">
+        <option value="top">top priority</option>
+        <option value="medium">medium priority</option>
+        <option value="low">low-priority</option>
+      </select>
       <input type="submit" value="Create New Task">
     </form>
 
@@ -23,6 +40,6 @@
 
     <script src="./src/index.js"></script>
   </div>
-
+  
 </body>
 </html>
